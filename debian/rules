@@ -1,0 +1,26 @@
+#!/usr/bin/make -f
+
+export GEM2DEB_TEST_RUNNER = --check-dependencies
+#export DH_RUBY = --gem-install
+
+%:
+	dh $@ --buildsystem=ruby --with ruby
+
+override_dh_auto_build:
+	dh_auto_build
+	yard && mv doc yardoc
+
+override_dh_auto_install:
+	rm -f benchmark.rb
+	dh_auto_install
+
+override_dh_auto_test:
+	dh_auto_test
+	# Link rails so the tests can be executed.
+	ln -s /usr/lib/ruby/vendor_ruby/rails test/rails
+
+override_dh_auto_clean:
+	dh_auto_clean
+	rm -rf .yardoc yardoc
+	rm -f test/rails
+	rm -rf log/

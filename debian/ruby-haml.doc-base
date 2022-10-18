@@ -1,0 +1,11 @@
+Document: ruby-haml-doc
+Title: Documentation of the Ruby Haml library
+Author: Hampton Catlin et al.
+Abstract: This documentation is generated with YARD from the source of the
+ Haml library. It contains the API documentation as well as some examples.
+Section: Programming/Ruby
+
+Format: HTML
+Index: /usr/share/doc/ruby-haml/yardoc/index.html
+Files: /usr/share/doc/ruby-haml/yardoc/*
+

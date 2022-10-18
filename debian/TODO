@@ -1,0 +1,5 @@
+ruby-haml package ToDo
+======================
+
+* Prevent the Rakefile to removing ./REVISION when running `rake doc`.
+* Fix the test suite.

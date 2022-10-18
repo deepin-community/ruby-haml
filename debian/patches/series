@@ -1,0 +1,3 @@
+no_bundler_in_tests
+privacy_breach.patch
+drop-git-in-gemspec.patch

@@ -1,0 +1,525 @@
+ruby-haml (5.2.2-1) UNRELEASED; urgency=medium
+
+  * update
+
+ -- Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>  Wed, 20 Jul 2022 16:20:30 +0800
+
+ruby-haml (5.2.2-1) unstable; urgency=medium
+
+  * Team upload
+
+  [ Gunnar Wolf ]
+  * Removing myself from uploaders, acknowledging reality
+
+  [ Cédric Boutillier ]
+  * New upstream version 5.2.2
+    + works with ruby3.0 and rails 6.1 (Closes: #1002095)
+  * Refresh packaging files with dh-make-ruby -w
+  * Refresh patches
+
+ -- Cédric Boutillier <boutil@debian.org>  Fri, 21 Jan 2022 15:28:44 +0100
+
+ruby-haml (5.1.2-2) unstable; urgency=medium
+
+  * Team upload
+
+  [ Debian Janitor ]
+  * Update standards version to 4.4.1, no changes needed.
+
+  [ Pirate Praveen ]
+  * Change build dependency on rails to ruby-rails
+  * Bump Standards-Version to 4.5.0 (no changes needed)
+
+ -- Pirate Praveen <praveen@debian.org>  Sat, 18 Jul 2020 22:39:17 +0530
+
+ruby-haml (5.1.2-1) unstable; urgency=medium
+
+  * Team upload
+
+  [ Utkarsh Gupta ]
+  * Add salsa-ci.yml
+
+  [ Cédric Boutillier ]
+  * New upstream version 5.1.2
+    + adds rails 6 support
+  * New v4 watch file, fixing uscan error
+  * Trim trailing whitespace.
+  * Use secure copyright file specification URI.
+  * Bump debhelper from old 11 to 12.
+  * Refresh patches
+
+ -- Cédric Boutillier <boutil@debian.org>  Wed, 04 Sep 2019 17:56:42 +0200
+
+ruby-haml (5.0.4-3) unstable; urgency=medium
+
+  * Team upload
+  * Depend on ruby-temple
+  * Reintroduce a ruby-tests.rb file to run the test suite
+  * Declare Testsuite as autopkgtest-pkg-ruby
+  * Ask gem2deb-test-runner to check rubygems dependencies
+  * Fix broken documentation symlinks (Closes: #857534)
+  * Move rails to Build-depends to make autopkgtest happy about dependencies
+    for tests
+  * Erase benchmark.rb to avoid screening ruby interpreter one
+  * Install documentation
+  * Bump debhelper compatibility level to 11
+
+ -- Cédric Boutillier <boutil@debian.org>  Sat, 12 Jan 2019 23:54:30 +0100
+
+ruby-haml (5.0.4-1) unstable; urgency=medium
+
+  [ Cédric Boutillier ]
+  * Bump debhelper compatibility level to 9
+  * Remove version in the gem2deb build-dependency
+  * Use https:// in Vcs-* fields
+  * Use https:// in Vcs-* fields
+  * Bump Standards-Version to 3.9.7 (no changes needed)
+  * Run wrap-and-sort on packaging files
+
+  [ Christian Hofstaedtler ]
+  * Point to correct homepage (Closes: #809822)
+
+  [ Andrew Lee (李健秋) ]
+  * Team upload.
+  * debian/watch: fetch from upstream github instead.
+  * New upstream release.
+    - Drop avoid_rake_early_death patch.
+    - Refresh no_rubygems_in_tests patch.
+    - Refresh privacy_breach.patch patch.
+  * debian/control: build-deps on ruby-kramdown and ruby-temple.
+  * Added drop-git-in-gemspec.patch.
+  * Adjust build-deps.
+  * Drop symlink on tests.
+  * Bump Standards-Version to 4.3.0 (no changes needed)
+  * Update Vcs tags.
+
+ -- Andrew Lee (李健秋) <ajqlee@debian.org>  Fri, 11 Jan 2019 14:10:56 +0800
+
+ruby-haml (4.0.7-1) unstable; urgency=low
+
+  [ Nitesh A Jain ]
+  * Team upload
+  * New upstream release
+  * Change upstream homepage link
+
+ -- Pirate Praveen <praveen@debian.org>  Fri, 30 Oct 2015 03:21:55 +0530
+
+ruby-haml (4.0.6-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release
+  * Remove patch fix_tests_form_opener_rails4.patch (not required)
+  * Bump standards version to 3.9.6 (no changes)
+
+ -- Pirate Praveen <praveen@debian.org>  Sat, 29 Aug 2015 10:31:34 +0530
+
+ruby-haml (4.0.5-2) unstable; urgency=medium
+
+  * Team upload.
+  * Change rails3 to rails in dependencies (Closes: #760914)
+  * debian/copyright:
+    + drop File paragraph about vendor/fssm (not present)
+    + rename MIT to Expat
+    + update source URL
+  * Fix relative path for the symlink to yard css/js
+  * Add link to avoid duplicate files in the HTML doc
+  * Add fix_tests_form_opener_rails4.patch to fix tests with Rails 4+
+  * Add privacy_breach.patch to remove links to remote images in the HTML
+    documentation
+
+ -- Cédric Boutillier <boutil@debian.org>  Fri, 12 Sep 2014 23:30:24 +0200
+
+ruby-haml (4.0.5-1) unstable; urgency=low
+
+  * Team upload.
+  * New upstream version
+  * Standards-version 3.9.4→3.9.5 (no changes needed)
+  * Upstream requires Rails >= 3.2, reflecting it in the dependencies
+
+ -- Gunnar Wolf <gwolf@debian.org>  Fri, 31 Jan 2014 10:08:50 -0600
+
+ruby-haml (4.0.3-3) unstable; urgency=low
+
+  * Team upload.
+  * Explicitly build-depend and depend on ruby-tilt. (Closes: #713161)
+  * Remove lintian overrides, about dropped transitional packages.
+
+ -- Cédric Boutillier <boutil@debian.org>  Tue, 20 Aug 2013 17:34:23 +0200
+
+ruby-haml (4.0.3-2) unstable; urgency=low
+
+  * Team upload.
+  * Fix Build-Depends to match the test suite needs.
+  * Add a patch to avoid using rubygems in tests.
+  * Bump Standards-Version to 3.9.4, no changes required.
+  * Drop transitional packages now that Wheezy is stable.
+  * Add git-buildpackage configuration.
+
+ -- Jérémy Bobbio <lunar@debian.org>  Wed, 05 Jun 2013 11:48:57 +0200
+
+ruby-haml (4.0.3-1) unstable; urgency=low
+
+  * New major upstream release
+  * Upstream has split the 'html2haml' functionality into a different gem;
+    adding it as 'Recommends' (ITP filed). This change makes ruby-haml not
+    to have to depend on ruby-hpricot (Closes: #696834)
+  * No longer supports Rails <= 3; b-d-i and suggests updated from the
+    'rails' (2.x) to the 'rails3' packages.
+  * Added recommends: and b-d-i: on ruby-erubis
+  * Drop both the 003fix-root-path and remove_require_rubygems patches, as
+    they are no longer needed
+  * Added suggests: on yard, in order to skip including duplicated
+    Javascript files found there (and added by it during the build)
+
+ -- Gunnar Wolf <gwolf@debian.org>  Thu, 23 May 2013 11:20:02 -0500
+
+ruby-haml (3.1.6-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/control:
+    - Bumped the build-depend on ruby-haml to 0.3.0.
+    - Bumped the standars-version to 3.9.3.
+  * debian/copyright: use the Debian copyright format version 1.0.
+  * debian/patches:
+    - Added remove_require_rubygems.patch.
+  * debian/ruby-haml.doc-base: added.
+  * debian/rules, debian/ruby-test*: use the upstream Rakefile to run
+    the tests and supply a symlink to rails to make them runable.
+  * debian/source/lintian-overrides: added overrides for the descriptions
+    of the transitional packages.
+
+ -- Paul van Tilburg <paulvt@debian.org>  Sun, 24 Jun 2012 17:40:31 +0200
+
+ruby-haml (3.1.4-2) unstable; urgency=low
+
+  * Stop building and providing/conflicting/replacing the (empty) haml-
+    elisp package, as it has become an independent package of its own
+
+ -- Gunnar Wolf <gwolf@debian.org>  Fri, 06 Jan 2012 11:07:12 -0600
+
+ruby-haml (3.1.4-1) unstable; urgency=low
+
+  [ Paul van Tilburg ]
+  * New upstream release.
+  * Source packages adapted according to the new Ruby policy:
+    - Build for both ruby1.8 and ruby1.9.1.
+    - Migrated to pkg-ruby-extras git repos; changed the Vcs-* fields in
+      debian/control accordingly.
+    - Changed the depends and recommends to follow the new Ruby library
+      naming scheme.
+  * debian/control:
+    - Added a default DM-Upload-Allowed field set to yes.
+    - Standards-Version bumped to 3.9.2; no changes required.
+    - Set XS-Ruby-Versions to all.
+    - Changed the build-depends for using gem2deb instead of ruby-pkg-tools.
+    - Switched the maintainer with the uploaders field as per new
+      convention the team is the default maintainer.
+    - Added a build-depend-indep on rake, yard (>= 0.5.3), ruby-sass and
+      ruby-maruku (>= 0.5.9) for documentation generation.
+    - Added a build-deped-indep on rails for the tests.
+    - Added a recommend on ruby-sass as it is no longer included in Haml
+      upstream (not even from the vendor dir).
+    - Added libhaml-ruby, libhaml-ruby1.8, libhaml-ruby-doc and haml-elisb
+      as transitional packages.
+  * debian/copyright: reworked to fit the DEP5 format.
+  * debian/docs: install generated docs
+  * debian/haml-elisp.NEWS: install a NEWS file to explain that the
+      emacs modes have disappeared.
+  * debian/install: install the VERSION files to the libdir of haml so
+      that Haml::Util.version works.
+  * debian/manpages: install manpages debian/html2haml.1 and debian/haml.1.
+  * debian/patches:
+     - 001fix-hardcoded-gem-path.patch:  dropped, this is now handled by
+       gem2deb.
+     - 002get-version-from-right-path.patch: dropped, doesn't work if we
+       also want to support Ruby 1.9.
+     - 003fix-root-path.patch: added, fixes the root path so that
+       Haml::Util.scope works properly.
+  * debian/rules:
+    - Call `rake doc` to generate documentation using yard.
+    - Disable tests for now... it doesn't seem to work at all with our
+      Rails 2.0 setup.
+    - Remove the installed sass.rb and plugin/sass.rb dummy libraries that
+      tries to load Sass via a gem/from the vendor dir.
+
+  [ Gunnar Wolf ]
+  * Added myself to uploaders
+  * Separate the $LOAD_PATH modification from the require call in
+    html2haml
+
+ -- Gunnar Wolf <gwolf@debian.org>  Sun, 18 Dec 2011 07:56:44 -0600
+
+libhaml-ruby (3.0.25-2) unstable; urgency=low
+
+  * Squeeze freeze is over - Reupload, targetting at unstable instead of
+    experimental
+
+ -- Gunnar Wolf <gwolf@debian.org>  Tue, 08 Feb 2011 21:02:36 -0600
+
+libhaml-ruby (3.0.25-1) unstable; urgency=low
+
+  * New upstream release
+  * Targetting experimental in order not to interfere with Squeeze's
+    freeze
+
+ -- Gunnar Wolf <gwolf@debian.org>  Mon, 20 Dec 2010 12:32:14 -0600
+
+libhaml-ruby (3.0.24-1) experimental; urgency=low
+
+  * New upstream release
+  * Targetting experimental in order not to interfere with Squeeze's
+    freeze
+
+ -- Gunnar Wolf <gwolf@debian.org>  Wed, 24 Nov 2010 09:05:39 -0600
+
+libhaml-ruby (3.0.22-1) experimental; urgency=low
+
+  * New upstream release
+  * Targetting experimental in order not to interfere with Squeeze's freeze
+
+ -- Gunnar Wolf <gwolf@debian.org>  Sat, 23 Oct 2010 10:46:11 -0500
+
+libhaml-ruby (3.0.21-1) experimental; urgency=low
+
+  * New upstream release
+  * Targetting experimental in order not to interfere with Squeeze's freeze
+
+ -- Gunnar Wolf <gwolf@debian.org>  Tue, 12 Oct 2010 11:49:04 -0500
+
+libhaml-ruby (3.0.18-1) experimental; urgency=low
+
+  * New upstream release
+  * Targetting experimental in order not to interfere with Squeeze's freeze
+
+ -- Gunnar Wolf <gwolf@debian.org>  Sun, 12 Sep 2010 21:23:41 -0500
+
+libhaml-ruby (3.0.15-1) unstable; urgency=low
+
+  * New upstream release
+  * Updated the upstream homepage
+  * Added "Recommends: libfssm-ruby1.8" to libhaml-ruby1.8 binary
+    package (Closes: #586613)
+  * Standards-version: 3.8.4→3.9.1 (no changes needed)
+  * Updated man pages to match current options (Closes: #589119)
+
+ -- Gunnar Wolf <gwolf@debian.org>  Thu, 29 Jul 2010 17:14:47 -0400
+
+libhaml-ruby (3.0.12-1) UNRELEASED; urgency=low
+
+  * New upstream release
+
+ -- Deepak Tripathi <apenguinlinux@gmail.com>  Sat, 12 Jun 2010 21:41:58 +0530
+
+libhaml-ruby (3.0.10-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Gunnar Wolf <gwolf@debian.org>  Mon, 07 Jun 2010 19:24:24 -0500
+
+libhaml-ruby (3.0.9-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Deepak Tripathi <apenguinlinux@gmail.com>  Thu, 03 Jun 2010 11:51:08 +0530
+
+libhaml-ruby (3.0.6-1) unstable; urgency=low
+
+  * New upstream release
+  * debian/control
+ 	+ added DMUA flag.
+
+ -- Deepak Tripathi <apenguinlinux@gmail.com>  Thu, 27 May 2010 10:59:02 +0530
+
+libhaml-ruby (3.0.4-1) unstable; urgency=low
+
+  * New upstream release (Closes: #581677)
+  * debian/copyright
+       + updated copyright information.
+       + added debian related copyright information.
+  * debian/rules
+       + removed patchsys-quilt.mk.
+       + removed rdoc from rules.it is provided as virtual package
+         with standard ruby.
+  * debian/control
+       + added myself to uploaders.
+  * debian/patches
+       + added patches for hard coded gem path.
+  * debian/haml.1
+       + removed hyphen-used-as-minus-sign.
+  * debian/
+       + update README.source.
+       + created man page for sass-convert.
+
+ -- Deepak Tripathi <apenguinlinux@gmail.com>  Mon, 17 May 2010 17:03:04 -0400
+
+libhaml-ruby (2.2.24-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Gunnar Wolf <gwolf@debian.org>  Thu, 29 Apr 2010 21:00:21 -0500
+
+libhaml-ruby (2.2.23-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Gunnar Wolf <gwolf@debian.org>  Thu, 22 Apr 2010 00:13:36 -0500
+
+libhaml-ruby (2.2.22-1) unstable; urgency=low
+
+  * New upstream release
+  * Updated debian/watch to ignore versions with nonnumeric components
+    (i.e. 'beta')
+  * Set source format to 3.0 (quilt), lintian looks happier
+
+ -- Gunnar Wolf <gwolf@debian.org>  Fri, 09 Apr 2010 08:19:19 -0500
+
+libhaml-ruby (2.2.21-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Gunnar Wolf <gwolf@debian.org>  Sun, 14 Mar 2010 19:04:18 -0600
+
+libhaml-ruby (2.2.20-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Gunnar Wolf <gwolf@debian.org>  Tue, 16 Feb 2010 11:07:32 -0600
+
+libhaml-ruby (2.2.19-1) unstable; urgency=low
+
+  * New upstream release
+  * Remove debian/patches/fix-emacs-mode, change included upstream
+  * Bump Standards-Version (no changes)
+
+ -- Micah Anderson <micah@debian.org>  Fri, 12 Feb 2010 12:23:49 -0500
+
+libhaml-ruby (2.2.17-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Gunnar Wolf <gwolf@debian.org>  Thu, 28 Jan 2010 14:24:49 -0600
+
+libhaml-ruby (2.2.16-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Gunnar Wolf <gwolf@debian.org>  Sun, 20 Dec 2009 18:37:44 -0600
+
+libhaml-ruby (2.2.15-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Gunnar Wolf <gwolf@debian.org>  Wed, 02 Dec 2009 16:20:12 -0600
+
+libhaml-ruby (2.2.14-1) unstable; urgency=low
+
+  * New upstream release
+  * Moved binary package ruby-elisp to section: lisp
+  * Binary package ruby-elisp now also depends on emacs23 | ruby-elisp (as
+    emacs23 provides ruby-mode) (Closes: #557190)
+
+ -- Gunnar Wolf <gwolf@debian.org>  Wed, 11 Nov 2009 22:39:00 -0600
+
+libhaml-ruby (2.2.13-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Gunnar Wolf <gwolf@debian.org>  Wed, 11 Nov 2009 11:49:08 -0600
+
+libhaml-ruby (2.2.10-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Gunnar Wolf <gwolf@debian.org>  Sat, 31 Oct 2009 19:37:38 -0600
+
+libhaml-ruby (2.2.8-2) unstable; urgency=low
+
+  * Include haml-elisp.emacsen-startup so the Emacs modes do not have to
+    be explicitly called (Closes: #551258)
+
+ -- Gunnar Wolf <gwolf@debian.org>  Fri, 16 Oct 2009 17:51:58 -0500
+
+libhaml-ruby (2.2.8-1) unstable; urgency=medium
+
+  * New upstream release; fixes potential XSS isue due to incomplete
+    HTML/Unicode escaping —
+    http://github.com/nex3/haml/commit/fcf0d8ff743e947d0f4f563b07770310132d4fc6
+
+ -- Gunnar Wolf <gwolf@debian.org>  Tue, 13 Oct 2009 14:15:30 -0500
+
+libhaml-ruby (2.2.6-1) unstable; urgency=low
+
+  [ Joshua Timberman ]
+  * Suggest, not recommend, rails and hpricot so they are not auto installed
+
+  [ Gunnar Wolf ]
+  * New upstream release
+
+ -- Gunnar Wolf <gwolf@debian.org>  Tue, 29 Sep 2009 18:41:06 -0500
+
+libhaml-ruby (2.2.5-1) unstable; urgency=low
+
+  * New upstream release
+  * Standards-version → 3.8.3 (no changes)
+  * Added README.source, keeping lintian at ease
+  * Actually do the right thing to avoid being compiled with emacs21,
+    instead of just conflicting with the whole package. Thanks to Aaron
+    M. Ucko for pestering me in the right direction! (Closes: #536091)
+
+ -- Gunnar Wolf <gwolf@debian.org>  Fri, 18 Sep 2009 17:56:25 -0500
+
+libhaml-ruby (2.2.0-2) unstable; urgency=low
+
+  [ Ryan Niebur ]
+  * Add myself to Uploaders
+  * install VERSION_NAME, fixing the errors during load
+
+  [ Gunnar Wolf ]
+  * Patched haml-mode.el to avoid compile-time (and thus, install-time)
+    error. Had to also declare Conflicts: on emacs21 (which is going
+    away soon anyway) as author will explicitly not support it. (Closes:
+    #536091)
+  * Thanks to Axel Beckert for his help with elisp!
+
+ -- Gunnar Wolf <gwolf@debian.org>  Tue, 04 Aug 2009 16:19:07 -0500
+
+libhaml-ruby (2.2.0-1) unstable; urgency=low
+
+  [ Ryan Niebur ]
+  * fix watch file
+
+  [ Gunnar Wolf ]
+  * Changed section to Ruby as per ftp-masters' request
+  * New upstream release
+  * Updated standards-version 3.8.0→3.8.2 (no changes needed)
+
+ -- Gunnar Wolf <gwolf@debian.org>  Mon, 06 Jul 2009 17:02:01 -0500
+
+libhaml-ruby (2.0.9-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Gunnar Wolf <gwolf@debian.org>  Tue, 24 Feb 2009 07:45:50 -0600
+
+libhaml-ruby (2.0.8-1) unstable; urgency=low
+
+  * New upstream release
+  * Fixed debian/watch, which included "/" as part of the directory name
+
+ -- Gunnar Wolf <gwolf@debian.org>  Fri, 13 Feb 2009 18:56:19 -0600
+
+libhaml-ruby (2.0.7-1) unstable; urgency=low
+
+  * New upstream release
+  * Added missing misc:Depends to haml-elisp
+  * Added "Conflicts: sufary" to binary package libhaml-ruby1.8, as both
+    packages provide (completely unrelated) /usr/bin/sass. (Closes:
+    #511032)
+
+ -- Gunnar Wolf <gwolf@debian.org>  Tue, 06 Jan 2009 17:36:49 -0600
+
+libhaml-ruby (2.0.6-1) unstable; urgency=low
+
+  * Initial upload (Closes: #509159)
+
+ -- Gunnar Wolf <gwolf@debian.org>  Fri, 19 Dec 2008 15:12:11 -0600

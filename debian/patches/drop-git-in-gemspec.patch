@@ -1,0 +1,21 @@
+Description: drop git usage in gemspec
+Author: Andrew Lee (李健秋) <ajqlee@debian.org>
+
+Origin: Debian
+Forwarded: not-needed
+Reviewed-By: Andrew Lee (李健秋) <ajqlee@debian.org>
+Last-Update: 2019-09-04
+
+--- a/haml.gemspec
++++ b/haml.gemspec
+@@ -9,9 +9,7 @@
+   spec.email       = ['haml@googlegroups.com', 'ronnie@dio.jp']
+ 
+   spec.executables = ['haml']
+-  spec.files       = `git ls-files -z`.split("\x0").reject do |f|
+-    f.match(%r{\Atest/})
+-  end
++  spec.files       = Dir.glob('**/*').reject { |f| f.match(%r{\Atest/}) }
+   spec.homepage    = 'http://haml.info/'
+   spec.license     = "MIT"
+   spec.metadata    = {

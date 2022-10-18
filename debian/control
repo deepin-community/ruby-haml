@@ -1,0 +1,44 @@
+Source: ruby-haml
+Section: ruby
+Priority: optional
+Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Uploaders: Paul van Tilburg <paulvt@debian.org>
+Build-Depends: gem2deb,
+               ruby-rails (>= 2:4.0~),
+               debhelper-compat (= 13)
+Build-Depends-Indep: rake,
+                     ruby-erubis,
+                     ruby-kramdown,
+                     ruby-maruku (>= 0.5.9),
+                     ruby-minitest,
+                     ruby-nokogiri,
+                     ruby-sass,
+                     ruby-tilt,
+                     ruby-temple (>= 0.8.0~),
+                     yard (>= 0.5.3)
+Standards-Version: 4.6.0
+Vcs-Git: https://salsa.debian.org/ruby-team/ruby-haml.git
+Vcs-Browser: https://salsa.debian.org/ruby-team/ruby-haml
+Homepage: https://haml.info/
+Testsuite: autopkgtest-pkg-ruby
+XS-Ruby-Versions: all
+Rules-Requires-Root: no
+
+Package: ruby-haml
+Architecture: all
+XB-Ruby-Versions: ${ruby:Versions}
+Depends: ${misc:Depends},
+         ${ruby:Depends},
+         ${shlibs:Depends}
+Recommends: ruby-erubis,
+            ruby-html2haml,
+            ruby-sass
+Suggests: rails (>= 2:5.2~),
+Description: Elegant, structured XHTML/XML templating engine
+ Haml (HTML Abstraction Markup Language) is a layer on top of XHTML or XML
+ that's designed to express the structure of XHTML or XML documents in a
+ non-repetitive, elegant, easy way, using indentation rather than closing
+ tags and allowing Ruby to be embedded with ease.
+ .
+ It was originally envisioned as a plugin for Ruby on Rails, but it can
+ function as a stand-alone templating engine.
